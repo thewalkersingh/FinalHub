@@ -4,6 +4,8 @@ import {useParams} from 'react-router-dom';
 import axios from 'axios';
 import BookingForm from './BookingForm';
 import '../styles/MovieDetails.css'; // Assuming CSS is added for styling
+import {movieData as data} from '../api/movieData';
+
 
 const MovieDetails = () => {
     const {id} = useParams();

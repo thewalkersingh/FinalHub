@@ -1,20 +1,22 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Navbar from './components/Navbar';
-import MovieList from './components/MovieList';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import MovieDetails from './components/MovieDetails';
+import MovieList from './components/MovieList';
+import Navbar from './components/Navbar';
+import { About } from './pages/About';
 // import './App.css';
 
 const App = () => {
     return (
         <Router>
-            <Navbar/>
+            <Navbar />
             <div className="app-container">
                 <Routes>
-                    <Route path="/" element={<MovieList/>}/>
-                    <Route path="/movies" element={<MovieList/>}/>
-                    <Route path="/movies/:id" element={<MovieDetails/>}/>
-                    {/* Add more routes as needed */}
+                    <Route path="/" element={ <MovieList /> } />
+                    <Route path="/movies" element={ <MovieList /> } />
+                    <Route path="/movies/:id" element={ <MovieDetails /> } />
+                    <Route path='/About.js' element={ <About /> } />
+                    {/* Add more routes as needed */ }
                 </Routes>
             </div>
         </Router>
